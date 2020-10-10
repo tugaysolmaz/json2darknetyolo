@@ -14,7 +14,6 @@ Versions of opencv or PIL should not matter, they are only needed for image dime
 
 You also should have a folder structure if you have Supervisely annotated data:
 
-'''
 __Dataset Folder\
 	|__meta.json
 	|__annotations\
@@ -26,7 +25,6 @@ __Dataset Folder\
 		|__01.jpg
 		|__02.png
 		|__...
-'''
 
 ## Tutorial
 
