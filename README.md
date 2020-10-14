@@ -31,12 +31,12 @@ __Dataset Folder\
 ## Tutorial
 
 * Clone repository
-* Just copy paste json2darknet.py right next to meta.json file
+* Just copy paste json2darknet.py right next to meta.json file if you have the folder structure mentioned above. 
 
-You can also use command line tool:
+You can also use command line tool if you like:
 
 ```
-python json2darknet -p database/my_dataset
+python json2darknet -mp path/to/meta.json/folder ip path/to/<images-annotations>/folder
 ```
 
 ## Author
