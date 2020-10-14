@@ -18,7 +18,7 @@ except ModuleNotFoundError as e:
 	raise Exception("Either install opencv-python or PIL")
 
 
-def main(data_path=""):
+def main(data_path="", image_data_path = ""):
 	meta_json_path = os.path.join(data_path,"meta.json")
 	if not os.path.isfile(meta_json_path):
 		raise Exception(meta_json_path + " not found.")
@@ -34,6 +34,7 @@ def main(data_path=""):
 			text_file.write(names)
 
 	# Convert all spaces
+	data_path = image_data_path
 	images_path = os.path.join(data_path,"images")
 	anno_path = os.path.join(data_path,"annotations")
 	darknet_path = os.path.join(data_path,"annotations_darknet")
@@ -76,8 +77,11 @@ def main(data_path=""):
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='Convert Supervisely format to Darknet-Yolo format')
-	parser.add_argument('-p','--path', dest="data_path", default="", metavar="path", type=str,
+	parser.add_argument('-mp','--meta_path', dest="data_path", default="", metavar="path", type=str,
 	                    help='full or relative path to folder containing meta.json')
+	parser.add_argument('-ip','--image_path', dest="iamge_data_path", default="", metavar="path", type=str,
+	                    help='full or relative path to folder containing annotations and images')
+	image_data_path
 
 	args = parser.parse_args()
-	main(data_path=args.data_path)
+	main(data_path=args.data_path, iamge_data_path=iamge_data_path)
