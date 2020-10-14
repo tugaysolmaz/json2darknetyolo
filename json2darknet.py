@@ -79,9 +79,8 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='Convert Supervisely format to Darknet-Yolo format')
 	parser.add_argument('-mp','--meta_path', dest="data_path", default="", metavar="path", type=str,
 	                    help='full or relative path to folder containing meta.json')
-	parser.add_argument('-ip','--image_path', dest="iamge_data_path", default="", metavar="path", type=str,
+	parser.add_argument('-ip','--image_path', dest="image_data_path", default="", metavar="path", type=str,
 	                    help='full or relative path to folder containing annotations and images')
-	image_data_path
 
 	args = parser.parse_args()
-	main(data_path=args.data_path, iamge_data_path=iamge_data_path)
+	main(data_path=args.data_path, image_data_path=args.image_data_path)
