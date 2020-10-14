@@ -36,7 +36,7 @@ __Dataset Folder\
 You can also use command line tool if you like:
 
 ```
-python json2darknet -mp path/to/meta.json/folder ip path/to/<images-annotations>/folder
+python json2darknet -mp path/to/meta.json/folder -ip path/to/<images-annotations>/folder
 ```
 
 ## Author
